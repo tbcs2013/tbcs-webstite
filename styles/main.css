@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --main-blue: #407bff; /* The bright blue used for buttons, highlights */
+  --light-blue: #64b5f6; /* Softer blue used in gradients and headers */
+  --green-accent: #81c784; /* Green used in title gradients */
+
+  --text-white: #ffffff; /* Main text color */
+  --background-dark: #0f1419; /* Background starting color */
+  --background-darker: #1a2332; /* Background ending color */
+
+  --nav-bg: rgba(15, 20, 25, 0.95); /* Navigation background */
+  --nav-bg-scrolled: rgba(15, 20, 25, 0.98); /* Nav background after scroll */
+
+  --blue-shadow: rgba(64, 123, 255, 0.3); /* Glow/shadow color */
+  --card-bg: rgba(26, 35, 50, 0.8); /* Background for cards and sections */
+  --light-border: rgba(64, 123, 255, 0.2); /* Border on cards */
+  --focus-border: rgba(64, 123, 255, 0.3); /* Border when input is focused */
+
+  --input-bg: rgba(15, 20, 25, 0.5); /* Input field background */
+  --sides-padding: calc((100vw - 1200px) / 2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  color: var(--text-white);
+  text-decoration: none;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    var(--background-dark) 0%,
+    var(--background-darker) 100%
+  );
+  min-height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* header navigation styles */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 20px var(--sides-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  background: var(--nav-bg-scrolled);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px var(--blue-shadow);
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.lg-text {
+  background: linear-gradient(
+    45deg,
+    var(--main-blue),
+    var(--light-blue),
+    var(--green-accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+header .logo img {
+  width: 80px;
+}
+
+nav,
+.min-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav span,
+.min-nav span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav span::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--main-blue), var(--light-blue));
+  transition: width 0.3s ease;
+}
+
+nav span:hover::after {
+  width: 100%;
+}
+
+nav span a,
+.min-nav span a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+nav span:hover .dropdown {
+  transform: translateX(-50%) scale(1);
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 10px);
+  transform: translateX(-50%) scale(0);
+  width: 310px;
+  padding: 10px;
+  background: var(--nav-bg);
+  transform-origin: top center;
+  transition: transform 0.3s ease;
+}
+.dropdown a {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+.dropdown a i {
+  font-size: 30px;
+  color: var(--main-blue);
+  padding-top: 13px;
+}
+.dropdown a span {
+  font-size: 18px;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.dropdown small {
+  font-weight: 400;
+}
+.min-nav span {
+  border: 1px solid var(--light-border);
+  transition: all 0.3s ease;
+}
+
+.min-nav span:hover {
+  border-color: var(--main-blue);
+  color: var(--main-blue);
+}
+
+.min-nav button {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 30px !important;
+}
+
+.cta-btn {
+  width: fit-content;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: var(--main-blue);
+  border: none;
+  color: var(--text-white);
+  box-shadow: 0 4px 20px var(--blue-shadow);
+}
+
+.cta-btn:hover {
+  background: var(--light-blue);
+}
+
+.hero {
+  padding: 50px var(--sides-padding);
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.hero-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+@keyframes textGlow {
+  from {
+    filter: drop-shadow(0 0 5px var(--blue-shadow));
+  }
+  to {
+    filter: drop-shadow(0 0 20px rgba(64, 123, 255, 0.8));
+  }
+}
+
+.hero-content p {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.hero-img {
+  width: 48%;
+}
+
+.hero-img img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
