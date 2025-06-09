@@ -1,0 +1,272 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 10px var(--sides-padding);
+  justify-content: space-between;
+}
+
+.hero-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.hero-content p {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.hero-img {
+  width: 48%;
+}
+
+.hero-img img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.wwd {
+  background: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top-right-radius: 90px;
+  border-top-left-radius: 90px;
+}
+
+.wwd h2,
+.wwd h3,
+.wwd h4 {
+  color: var(--font-color);
+  line-height: 1;
+}
+
+.wwd h2 {
+  color: var(--light-blue);
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.wwd h4 {
+  border: 1px solid var(--main-blue);
+}
+
+.wwd .services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.service {
+  --font-color: #333;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  background: #ffffffe5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.service::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(64, 123, 255, 0.1),
+    transparent
+  );
+  background: var(--light-blue);
+  width: 100%;
+  height: 100%;
+  transition: left 0.3s ease-in;
+  z-index: -1;
+}
+
+.service:hover {
+  --font-color: #fff;
+}
+
+.service:hover::before {
+  left: 0%;
+}
+
+.service h3 {
+  display: flex;
+  font-size: 22px;
+  font-weight: 400;
+  align-items: start;
+  gap: 5px;
+  border-bottom: 1px solid var(--light-blue);
+  padding: 20px 10px 5px;
+  transition: all 0.3s ease-in;
+}
+
+.service:hover h3 {
+  border-color: white;
+}
+
+.service h3 i {
+  color: var(--font-color);
+  transition: all 0.3s ease-in;
+  font-size: 35px;
+}
+
+.service p {
+  font-size: 1rem;
+  color: var(--font-color);
+  transition: all 0.3s ease-in;
+  padding: 0 10px;
+}
+
+.service a {
+  color: var(--background-darker);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+.service a i {
+  font-size: 22px;
+  color: inherit;
+}
+
+.service a:hover {
+  gap: 10px;
+  color: var(--main-blue);
+}
+
+.service-img {
+  width: 100%;
+  /* background: var(--light-blue); */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 200px;
+}
+
+.service img {
+  width: 95%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.wcu {
+  background: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.wcu-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.wcu-container .img {
+  width: 50%;
+}
+.wcu-container .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.wcu-container .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+
+.wcu-container .text p {
+  color: var(--background-darker);
+}
+
+.qualities-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quality {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  font-weight: normal;
+  color: var(--background-darker);
+  padding: 10px 10px 10px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--light-blue);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.quality::before {
+  content: "";
+  background: var(--light-blue);
+  width: 10px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.quality i {
+  color: var(--main-blue);
+  font-size: 25px;
+}
+
+.work-numbers {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wn-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.wn-item span {
+  font-size: 20px;
+  font-weight: 400;
+}
