@@ -239,3 +239,36 @@
   font-size: 20px;
   font-weight: 400;
 }
+
+.market {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: transparent;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;*/
+  text-align: right;
+}
+
+.market h2 {
+  color: var(--text-white);
+}
+
+.market p {
+  /* width: min(100%, 900px); */
+}
+
+.auto-slideshow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  background: var(--card-bg);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.auto-slideshow img {
+  max-width: 300px;
+}
