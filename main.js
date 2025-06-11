@@ -34,6 +34,7 @@ function createParticles() {
   for (let i = 0; i < 70; i++) {
     const particle = document.createElement("div");
     particle.style.position = "absolute";
+    particle.style.zIndex = "-1";
     particle.style.width = "4px";
     particle.style.height = "4px";
     particle.style.backgroundColor = "white";
