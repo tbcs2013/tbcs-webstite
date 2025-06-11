@@ -266,6 +266,24 @@ p {
   gap: 10px;
 }
 
+/* Required by Swiper to layout correctly */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
 /* animation keyframes */
 @keyframes textGlow {
   from {

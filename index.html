@@ -8,6 +8,11 @@
       href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/home.css" />
     <title>Home | Think Big Computer Solutions</title>
@@ -365,17 +370,100 @@
         </div>
       </section>
       <section class="portfolio">
-        <h2>What we've done</h2>
+        <h2>Don’t just take our word for it</h2>
         <h3>Real solutions. Real impact.</h3>
         <p>
           From national government agencies to private startups, our portfolio
           showcases a broad spectrum of successful ICT projects. Whether it's
           setting up a secure network, supplying bulk computer equipment, or
           delivering technical training, we consistently exceed expectations.
-          Here’s a glimpse of our work in action.
+          Here are some of our clients and their stories.
         </p>
+        <div class="client-stories swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="testimonial swiper-slide">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VhBH0XnGnD7umfXv4c3MhMrYL0O0CDEC1Q&s"
+                alt=""
+              />
+              <p>
+                "We've worked with Think Big Computer Solutions on several
+                projects, and their expertise and professionalism have been
+                invaluable. They have consistently delivered high-quality
+                solutions that meet our needs and exceed our expectations."
+              </p>
+              <h4>-John Doe, CEO of Example Company</h4>
+            </div>
+            <div class="testimonial swiper-slide">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VhBH0XnGnD7umfXv4c3MhMrYL0O0CDEC1Q&s"
+                alt=""
+              />
+              <p>
+                "We've worked with Think Big Computer Solutions on several
+                projects, and their expertise and professionalism have been
+                invaluable. They have consistently delivered high-quality
+                solutions that meet our needs and exceed our expectations."
+              </p>
+              <h4>-John Doe, CEO of Example Company</h4>
+            </div>
+            <div class="testimonial swiper-slide">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VhBH0XnGnD7umfXv4c3MhMrYL0O0CDEC1Q&s"
+                alt=""
+              />
+              <p>
+                "We've worked with Think Big Computer Solutions on several
+                projects, and their expertise and professionalism have been
+                invaluable. They have consistently delivered high-quality
+                solutions that meet our needs and exceed our expectations."
+              </p>
+              <h4>-John Doe, CEO of Example Company</h4>
+            </div>
+            <div class="testimonial swiper-slide">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7VhBH0XnGnD7umfXv4c3MhMrYL0O0CDEC1Q&s"
+                alt=""
+              />
+              <p>
+                "We've worked with Think Big Computer Solutions on several
+                projects, and their expertise and professionalism have been
+                invaluable. They have consistently delivered high-quality
+                solutions that meet our needs and exceed our expectations."
+              </p>
+              <h4>-John Doe, CEO of Example Company</h4>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
       </section>
     </main>
   </body>
   <script src="main.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      effect: "slide",
+      grabCursor: true,
+      autoplay: {
+        delay: 5000, // 5 seconds between slides
+        disableOnInteraction: false, // Keeps autoplay after manual swipe
+      },
+      loop: true,
+    });
+  </script>
 </html>

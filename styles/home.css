@@ -366,3 +366,38 @@ h2 li {
   border-radius: 10px;
   border: 1px solid var(--light-blue);
 }
+
+.portfolio {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portfolio h2:first-child {
+  color: var(--main-blue);
+}
+
+.client-stories {
+  height: 300px;
+  width: 100%;
+  background: var(--green-accent);
+  border-radius: 10px;
+  border: 1px solid var(--light-blue);
+  display: flex;
+  overflow: hidden;
+}
+
+.testimonial {
+  background: var(--background-darker);
+}
+
+.testimonial img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--light-blue);
+  float: left;
+}
