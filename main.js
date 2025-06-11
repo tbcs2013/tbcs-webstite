@@ -1,5 +1,20 @@
 const header = document.querySelector("header");
 
+//toggle menu on smaller screens
+const menuOpen = document.getElementById("menuOpen");
+const menuClose = document.getElementById("menuClose");
+const nav = document.querySelector("nav");
+menuOpen.addEventListener("click", function () {
+  nav.classList.add("opened");
+  menuClose.style.display = "flex";
+  menuOpen.style.display = "none";
+});
+menuClose.addEventListener("click", function () {
+  nav.classList.remove("opened");
+  menuOpen.style.display = "flex";
+  menuClose.style.display = "none";
+});
+
 //check if window is already scrolled after refresh
 if (window.scrollY > 0) {
   header.classList.add("scrolled");

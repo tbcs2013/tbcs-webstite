@@ -97,6 +97,15 @@
         <button id="menuOpen"><i class="bx bx-menu-wide"></i></button>
         <button id="menuClose"><i class="bx bx-x"></i></button>
       </div>
+      <!-- calculte header height using js and set as a variable in css -->
+      <script>
+        const headerContainer = document.querySelector("header");
+        const headerHeight = headerContainer.offsetHeight;
+        document.documentElement.style.setProperty(
+          "--header-height",
+          `${headerHeight}px`
+        );
+      </script>
     </header>
     <main>
       <section class="hero">
@@ -441,7 +450,6 @@
       </section>
     </main>
   </body>
-  <script src="main.js"></script>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -466,4 +474,5 @@
       loop: true,
     });
   </script>
+  <script src="main.js"></script>
 </html>

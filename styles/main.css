@@ -49,18 +49,17 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 10;
   width: 100%;
   padding: 20px var(--sides-padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: transparent;
-
   transition: all 0.3s ease;
 }
 
 header.scrolled {
+  z-index: 10;
   background: var(--nav-bg-scrolled);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px var(--blue-shadow);
@@ -69,18 +68,6 @@ header.scrolled {
 header .logo {
   font-size: 30px;
   font-weight: 600;
-}
-
-.lg-text {
-  background: linear-gradient(
-    45deg,
-    var(--main-blue),
-    var(--light-blue),
-    var(--green-accent)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 header .logo img {
@@ -184,12 +171,27 @@ nav span:hover .dropdown {
 
 .min-nav button {
   display: none;
+  justify-content: center;
+  align-items: center;
   border: none;
   background: none;
   font-size: 30px !important;
+  cursor: pointer;
 }
 
 /* default styles    */
+
+.lg-text {
+  background: linear-gradient(
+    45deg,
+    var(--main-blue),
+    var(--light-blue),
+    var(--green-accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .cta-btn {
   width: fit-content;
@@ -310,5 +312,69 @@ p {
   }
   to {
     left: calc(90px * -1);
+  }
+}
+
+/* media queries for responsiveness */
+
+@media screen and (max-width: 1200px) {
+  body {
+    --sides-padding: 50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    --sides-padding: 30px;
+  }
+  header {
+    padding: 10px var(--sides-padding);
+  }
+
+  header .logo {
+    font-size: 30px;
+  }
+
+  nav {
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    width: min(99%, 400px);
+    height: calc(100vh - var(--header-height));
+    background-color: var(--background-darker);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px var(--sides-padding);
+    gap: 20px;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: all 0.3s ease;
+  }
+  nav.opened{
+    transform: scale(1);
+  }
+  }
+
+  nav span,
+  .min-nav span {
+    padding: 5px 10px;
+  }
+  header .bx-chevron-down {
+    display: none;
+  }
+
+  nav span:has(.dropdown) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .dropdown {
+    display: none;
+  }
+  #menuOpen {
+    display: flex;
   }
 }

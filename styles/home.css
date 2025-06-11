@@ -1,5 +1,6 @@
 .hero {
   height: 100vh;
+  max-height: 1000px;
   display: flex;
   align-items: center;
   padding: 10px var(--sides-padding);
