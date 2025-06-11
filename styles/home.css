@@ -42,7 +42,7 @@
   flex-direction: column;
   align-items: start;
   gap: 10px;
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 40px;
   border-top-right-radius: 90px;
   border-top-left-radius: 90px;
@@ -217,28 +217,6 @@
   font-size: 25px;
 }
 
-.work-numbers {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.wn-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  font-weight: 500;
-}
-
-.wn-item span {
-  font-size: 20px;
-  font-weight: 400;
-}
-
 .auto-slideshow {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -401,4 +379,54 @@ h2 li {
   border-radius: 10px;
   border: 1px solid var(--light-blue);
   float: left;
+}
+
+/* media queries */
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 40px;
+  }
+  .hero,
+  .wcu-container,
+  .courses {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    height: auto;
+  }
+
+  .hero-content,
+  .wcu-container .text,
+  .wcu-container .img,
+  .hero-img,
+  .courses .text,
+  .courses .img {
+    width: 100%;
+  }
+
+  .wwd {
+    padding-top: 60px;
+  }
+
+  .quality {
+    font-size: 16px;
+    padding: 5px 5px 5px 10px;
+  }
+
+  .products-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    height: 500px;
+  }
+
+  .testimonial img {
+    width: 100%;
+  }
 }

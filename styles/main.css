@@ -40,8 +40,7 @@ body {
     var(--background-darker) 100%
   );
   min-height: 100vh;
-  overflow: hidden;
-  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* header navigation styles */
@@ -352,9 +351,8 @@ p {
     transform-origin: top right;
     transition: all 0.3s ease;
   }
-  nav.opened{
+  nav.opened {
     transform: scale(1);
-  }
   }
 
   nav span,
@@ -376,5 +374,22 @@ p {
   }
   #menuOpen {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    --sides-padding: 20px;
+  }
+
+  .min-nav {
+    gap: 10px;
+  }
+
+  .min-nav span:first-child {
+    display: none;
+  }
+  h3 {
+    font-size: 30px;
   }
 }
