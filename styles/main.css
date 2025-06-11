@@ -285,3 +285,12 @@ p {
     transform: translateY(-20px) rotate(180deg);
   }
 }
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(90px * -1);
+  }
+}
