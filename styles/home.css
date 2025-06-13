@@ -401,6 +401,26 @@ h2 li {
   text-align: right;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: var(--text-white);
+}
+
+.contact h4,
+.contact p,
+.contact a {
+  color: var(--background-darker);
+}
+
+.contact i {
+  color: var(--main-blue);
+  font-size: 23px;
+}
+
 /* media queries */
 
 @media screen and (max-width: 800px) {
