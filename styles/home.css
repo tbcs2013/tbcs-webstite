@@ -421,12 +421,80 @@ h2 li {
   font-size: 23px;
 }
 
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-details,
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--light-blue);
+}
+
+.contact-details {
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--focus-border);
+  backdrop-filter: blur(10px);
+}
+
+.contact-details h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.contact-details p {
+  padding-left: 20px;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.contact-details p a {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.contact-form {
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  background: var(--background-darker);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px solid var(--light-blue);
+  border-radius: 5px;
+  padding: 5px;
+  background: var(--input-bg);
+  color: var(--text-white) !important;
+}
+
+::placeholder {
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
 /* media queries */
 
 @media screen and (max-width: 800px) {
   h1 {
     font-size: 40px;
   }
+
   .hero,
   .wcu-container,
   .courses {
