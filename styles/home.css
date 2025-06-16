@@ -464,10 +464,8 @@ h2 li {
 }
 
 .contact-form {
-  padding: 10px;
   border-radius: 10px;
   border: 0;
-  background: var(--background-darker);
 }
 
 .contact-form input,
@@ -478,14 +476,83 @@ h2 li {
   border: 1px solid var(--light-blue);
   border-radius: 5px;
   padding: 5px;
-  background: var(--input-bg);
-  color: var(--text-white) !important;
+  background: transparent;
+  color: var(--background-darker) !important;
+}
+
+select option {
+  background: var(--background-darker);
+  color: var(--text-white);
+}
+.contact-form textarea {
+  height: 150px;
+  width: 100%;
+  resize: none;
 }
 
 ::placeholder {
   color: inherit;
   font-weight: inherit;
   font-size: inherit;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.checkbox input {
+  display: none; /* hide the native checkbox */
+}
+
+.checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  transition: background 0.2s ease;
+}
+
+/* checked state */
+.checkbox input:checked + .checkmark {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* checkmark tick */
+.checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  background: var(--main-blue);
+  color: var(--text-white);
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.contact-form button:hover {
+  background: var(--background-darker);
 }
 
 /* media queries */
@@ -509,8 +576,13 @@ h2 li {
   .wcu-container .img,
   .hero-img,
   .courses .text,
-  .courses .img {
+  .courses .img,
+  .contact-form,
+  .contact-details {
     width: 100%;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
   }
 
   .wwd {
