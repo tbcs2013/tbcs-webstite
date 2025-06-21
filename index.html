@@ -10,6 +10,11 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
@@ -544,13 +549,107 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer-about">
+        <!-- <img
+          src="images/tbcs_logo.jpg"
+          alt="Think Big Computer Solutions Logo"
+        /> -->
+        <p style="max-width: 600px">
+          Think Big Computer Solutions is a leading provider of computer
+          solutions for businesses in Malawi. We offer a wide range of computer
+          hardware and software products to help businesses and organizations
+          stay up-to-date with the latest technologies and tools.
+        </p>
+      </div>
+      <div class="links-container">
+        <!-- Link Group: Newsletter -->
+        <div class="link-grp newsletter-form">
+          <h2>Newsletter</h2>
+          <p>Get the latest news, updates, and offers from us</p>
+          <form action="">
+            <input type="email" placeholder="Email" name="email" required />
+            <button type="submit"><i class="bx bx-send-alt-2"></i></button>
+          </form>
+        </div>
+
+        <div class="link-grp">
+          <h2>Contact Us</h2>
+          <p>
+            <a href="tel:+265999475588">+265 999 475 588</a>
+            <a href="tel:+265881041955">+265 881 041 955</a>
+          </p>
+          <p>
+            <a href="mailto:tbcompusolutions@gmail.com"
+              >tbcompusolutions@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="link-grp">
+          <h2>Write to us</h2>
+          <p>
+            Think Big Computer Solutions<br />
+            P.O Box 2409<br />
+            Area 49 Shire, Nkuyu St <br />
+            Lilongwe, Malawi
+          </p>
+        </div>
+      </div>
+      <div class="social-medias">
+        <a
+          href="http://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-facebook"></i
+        ></a>
+        <a
+          href="http://www.twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-twitter"></i
+        ></a>
+        <a
+          href="http://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a
+          href="http://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a
+          href="http://www.whatsapp.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-whatsapp"></i
+        ></a>
+        <a
+          href="http://www.telegram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bx bxl-tiktok"></i
+        ></a>
+      </div>
+      <p class="copyright">
+        <!-- get current year -->
+
+        &copy; 2013 - <span id="year"></span> Think Big Computer Solutions. All
+        rights reserved.
+        <script>
+          document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+      </p>
+    </footer>
   </body>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
   <script>
+    //initialize swiper
     var swiper = new Swiper(".mySwiper", {
       pagination: {
         el: ".swiper-pagination",
